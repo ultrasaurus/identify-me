@@ -58,6 +58,8 @@ typings/
 dist/
 tmp/
 out-tsc/
+functions/**/*.js
+functions/**/*.js.map
 
 # IDEs and editors
 /.idea
