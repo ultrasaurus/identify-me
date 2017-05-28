@@ -4,7 +4,7 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",
-    "deploy": "tsc && firebase deploy"
+    "deploy": "tsc && firebase deploy --only functions"
   },
   "dependencies": {
     "firebase-admin": "~4.2.1",
