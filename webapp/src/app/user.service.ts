@@ -27,7 +27,7 @@ export class UserService {
     let db = this.afDB.app.database();
 
     this.user$ = this.afAuth.authState;
-    this.profile$ = this.afAuth.authState.do(user => {
+    this.user$.subscribe(user => {
         console.log('UserService: user', user);
         if (user) {
           this.loginStatus = "LoggedIn";
@@ -44,7 +44,8 @@ export class UserService {
         } else {
           this.loginStatus = "LoggedOut";
         }
-    }).mergeMap(user => {
+    });
+    this.profile$ = this.user$.mergeMap(user => {
       if (user) {
         return afDB.object(`profiles/${user.uid}`);
       } else {
