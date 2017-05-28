@@ -17,7 +17,7 @@ export class AuthGuard implements CanActivate {
   activationCheck(state):Observable<boolean>{
     return this.userService.user$.do(user => {
       if (user == null) {
-          this.router.navigate(['/login'], { queryParams: { returnUrl: state.url }});
+          this.router.navigate(['/login']);
       }
       return user;
     }).map(user => {
