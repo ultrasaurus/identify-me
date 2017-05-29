@@ -1,7 +1,7 @@
 <section class="app flex-container" fxLayout="column" fxLayoutAlign="start center">
 
   <!--TOP BAR -->
-  <md-toolbar color="primary" class="mat-elevation-z3 app-bar">
+  <md-toolbar color="primary" class="mat-elevation-z3">
     <h2 class="title">{{title}}</h2>
     <button md-icon-button [mdMenuTriggerFor]="menu">
       <i class="material-icons app-toolbar-menu">more_vert</i>
@@ -21,9 +21,6 @@
   <md-sidenav-container fxFlex>
 
 
-    <!-- CANVAS -->
-    <div class="canvas">
       <ng-content></ng-content>
-    </div>
   </md-sidenav-container>
 </section>
